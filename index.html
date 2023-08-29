@@ -45,7 +45,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-08-29 09:40:46'
+  postUpdate: '2023-08-29 10:17:23'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -149,11 +149,276 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://w.wallhaven.cc/full/l8/wallhaven-l8yl7p.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://w.wallhaven.cc/full/zy/wallhaven-zyxvqy.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Study"><span class="site-name">Study</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Study</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/28/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/" title="多线程和线程同步">多线程和线程同步</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-28T08:01:29.457Z" title="Created 2023-08-28 16:01:29">2023-08-28</time></span></div><div class="content">线程创建线程之间有主次，主线程与各个子线程父子关系，子线程之间并行，随机发生
-12pthread_t pthread_self(void)//返回当前线程的线程ID
-在一个进程中调用线程创建函数，就可以得到一个子线程，和进程不同需要给每一个创建出的线程指定出一个处理函数
-123#include &lt;pthread.h&gt;int pthread_creat(pthread_t*thread,const pthread_attr_t*attr,    void *(*start_routine)(void*),void*arg)
-参数：thread：传出参数，无符号长整型，线程创建成功，会将线程ID写入到这个指针指向的内存中attr：线程的属性，一般情况下默认属性，写NULLstart_routine：函数指针，创建出的子线程的处理动作，也就是在子线程中执行arg：作为实参传入到start_routine指针指向的函数内部
-123456789101112131415161718192021222324252627282930#include &lt;unistd.h&gt;#inc ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/26/vim%E7%BE%8E%E5%8C%96/" title="Vim 美化">Vim 美化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-26T12:35:33.981Z" title="Created 2023-08-26 20:35:33">2023-08-26</time></span></div><div class="content">vim美化123 git clone https://github.com/chxuan/vimplus.git~git clone cd ~/.vimplus./install.sh
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://w.wallhaven.cc/full/l8/wallhaven-l8yl7p.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://w.wallhaven.cc/full/zy/wallhaven-zyxvqy.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Study"><span class="site-name">Study</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Study</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/29/%E6%8C%87%E9%92%88/" title="指针">指针</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-29T02:01:04.467Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></span></div><div class="content">指针
+123456789101112131415int a = 5； int *p;  //整型指针   要对应比如double型变量对应double型指针p = &amp;a; //取址//int *p = &amp;acout&lt;&lt;p;// a的地址cout&lt;&lt;&amp;a;//a的地址cout&lt;&lt;&amp;p;//p的地址cout&lt;&lt;*p;//解引用 5   如果a不初始化，系统会随机分配int b=8;*p = b;   //赋值但p地址没变cout&lt;&lt;a;   // 8cout&lt;&lt;p; // p is 2002cout&lt;&lt;p+1; //p+1为2006 因为int类型占4字节cout&lt;&lt;*(p+1) ;//*(p+1)为垃圾值
 
-终端美化1234567891011121314151617181920212223242526 #安装插件 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestionsmkdir $ZSH_CUSTOM/plugins/incrcurl -fsSL https://mimosa-pudica.net/src/incr-0.2.zsh -o $ZSH_CUSTOM/plugins/incr/incr.zshgit clone https://github.com/zsh-users/zsh-syntax-highlighting.git $&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;/plugins/zsh-syntax ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://w.wallhaven.cc/full/l8/wallhaven-l8yl7p.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Pao Pao</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/28/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/" title="多线程和线程同步">多线程和线程同步</a><time datetime="2023-08-28T08:01:29.457Z" title="Created 2023-08-28 16:01:29">2023-08-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/26/vim%E7%BE%8E%E5%8C%96/" title="Vim 美化">Vim 美化</a><time datetime="2023-08-26T12:35:33.981Z" title="Created 2023-08-26 20:35:33">2023-08-26</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-29T01:40:46.349Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Pao Pao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+我们不止使用指针来存储内存地址，同时也使用它来解引用那些地址的内容
+
+
+12345678910//1025 = 0000000 00000000 0000100 00000001int a = 1025;int *p;p = &amp;a;cout&lt;& ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/29/%E5%BA%93+Makefile/" title="Makefile+动静态库">Makefile+动静态库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-29T02:01:04.455Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></span></div><div class="content">一、动态库和静态库1.静态库
+由ar生成
+
+Linux中静态库以lib作为前缀，以**.a作为后缀，中间是库的名字，即libxxx.a**
+Windows中libxxx.lib
+
+ar的三个参数
+
+c：创建一个库，不管库是否存在
+s：创建目标文件索引，可以加快时间
+r：在库中插入模块。默认新成员添加在库尾，如果同名的存在则替换
+
+1.1生成静态库的步骤
+对源文件进行汇编，得到.o文件 -c
+1g++  *.cpp  -c  main.o
+
+对.o进行打包得到静态库
+1ar rcs  libxxx.a   main.o
+
+发布静态库
+  1.提供.h      2.提供libxxx.a
+
+
+1.2静态库的使用-l指定使用的库
+-L搜索库的路径
+12gcc main.c -o clac   -L ./    -l calc#可以有空格也可以没有
+
+2.动态库程序运行时加载的库，当动态链接库正确部署后，运行的多个程序可以使用同一个加载到内存的动态库，所以在Linux中也可以叫共享库
+是目标文件的集合，库中函数和变量的地址使用的是相对地址（静态库中是绝对地址），其真实地址是在应用程序加载动态库 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/29/VSCode%20C++/" title="VSCode">VSCode</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-29T02:01:04.451Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></span></div><div class="content">一、编译器调试器安装安装GCC GDB并确认
+换国内源
+
+1234sudo gedit /etc/apt/sources.list#加入要换的国内源在最前sudo apt-get updatesudo apt-get upgrade
+
+
+安装及确认
+
+123456sudo apt-get updatesudo apt install build-essentialg++ --versiongbd --versiongdb --version
+
+安装CMake、tree、terminator123456sudo apt install cmakesudo apt install treesudo apt install terminator#ctrl+alt+t打开终端
+
+二、GCC编译器VSCode是通过调用GCC编译器来实现C&#x2F;C++编译工作的
+编译过程
+-E 预处理-Pre-Processing   &#x2F;&#x2F;.i文件
+12g++   -E   test.cpp  -o  test,i#-E编译器仅对输入文件进行预处理
+
+-S-Compiling       ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/29/Redis/" title="Redis">Redis</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-29T02:01:04.443Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></span></div><div class="content">一、Redis简介Redis基于内存的数据存储系统
+
+
+
+基本数据类型
+高级数据类型
+
+
+
+字符串 String
+消息队列 Stream
+
+
+列表 List
+地理空间 Geospatial
+
+
+集合 Set
+HyperLogLog
+
+
+有序集合 SortedSet
+位图 Bitmap
+
+
+哈希 Hash
+位域 Bitfield
+
+
+使用方式
+
+CLI 命令行接口
+API 应用程序接口
+GUI
+
+优点
+
+性能极高
+数据类型丰富，单键值对最大支持512M大小的数据
+简单易用，支持所有主流的编程语言
+支持数据持久化，主从复制，哨兵模式等高可用特性
+
+安装12sudo snap install redissudo snap start redis
+
+二、RedisInsight安装1234docker pull redislabs/redisinsightchown -R 1001 redisinsightmkdir -p redisinsightdocker run -d -v /data/redisinsight:/db -p 8001:8001 redislabs/redisinsigh ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/29/Nginx/" title="Nginx">Nginx</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-29T02:01:04.431Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></span></div><div class="content">一、安装Nginx1sudo apt install nginx
+
+error1nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+
+
+12ps -ef|grep nginxsudo fuser -k 80/tcp  #命令关闭80端口即可
+
+二、服务启停浏览器输入localhost
+
+
+master进程——主进程，负责读取和验证配置文件及管理worker进程，只有一个
+worker进程——工作进程，负责处理实际的请求，数量可以通过配置文件设定
+lsof——查看端口占用状况
+1lsof -i:80     #只查看80端口
+
+nginx  -s  signal
+
+quit ：停止
+stop：立即停止
+reload：重载配置文件
+reopen：重新打开日志文件
+
+三、静态站点部署查看安装目录，编译参数以及配置文件和日志文件的位置等各种信息。
+123nginx -V#或者nginx -t
+
+常见位置：
+​	&#x2F;etc&#x2F;nginx&#x2F;conf
+​	&#x2F;usr&#x2F ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/29/Mysql/" title="MySQL">MySQL</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-29T02:01:04.419Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></span></div><div class="content">一、软件安装及介绍简单命令展示所有数据库：SHOW DATABASES;
+新建数据库：CREATE DATABASES [dbname];
+使用某个数据库：USE [dbname];
+命名规则
+英文、数字、下划线
+英文开头
+一般小写
+
+导入数据库
+连接
+新建连接 mysql
+点击sqllearning
+点击表
+点击导入向导
+设置数据类型
+
+
+
+二、标准语法1、关键字
+关键字 SELECT...FROM...
+操作对象 ：表名、列名
+不区分大小写
+以分号结尾
+
+1SELECT prod_name FROM prod_info；
+
+
+语句类型
+DLL——数据定义语言
+CREATE创建数据库和表等对象
+DROP删除数据库和表等对象
+ALTER修改数据库和表等对象
+
+
+DML——数据操作语言
+SELECT 查询表中数据
+INSERT 像表中插入新数据
+UPDATE 更新表中数据
+DELETE 删除表中数据
+
+
+DCL——数据控制语言
+COMMIT 将SQL语句的执行结果写入数据库表中
+ROLLBACK 撤销SQL语句的执行结果
+
+
+
+查询-&gt;新建查询
+三、常用语法1、单表查询
+单列查询  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/29/JavaScript/" title="JavaScript">JavaScript</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-29T02:01:04.407Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></span></div><div class="content">Lesson 1
+JavaScript 给电脑发出指令
+写JavaScript代码 
+在控制台运行代码
+语法
+
+
+
+
+
+Lesson 2浮点数进行计算时有时是不准确的
+
+
+当计算浮点数不精确时，计算钱的时候
+
+使用美分进行计算
+再转换为美元
+
+Lesson 3
+Number and Math
+运算规则和括号
+Math.round()
+浮点数可能计算不准确
+
+
+
+typeof——查看类型
+字符串+数字 ——强制转换为字符串
+转义字符
+
+
+插值——将值直接插入到字符串中  ${}
+使用反引号和占位符符号来形成字符串
+使用反引号形成字符串称为模板文字或模板字符串
+
+
+Lesson 5Lesson 6&#x3D;&#x3D;&#x3D; 等号   &#x3D;&#x3D;！不等号
+当我们点击一个button
+
+计算机随机选择石头剪刀布
+
+比较计算机和我们选择的结果
+
+显示结果在窗口
+
+
+123456789101112131415//   0-1/3 rock 1/3-2/3 paper 2/3-1 Scissors     const randomNumber = Math.random(); ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/29/html+css/" title="HTML+CSS">HTML+CSS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-29T02:01:04.395Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></span></div><div class="content">html结构12345678910&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;!-- head是不可见元素 body是可见的 --&gt;    &lt;head&gt;    &lt;/head&gt;        &lt;body&gt;    &lt;/body&gt;&lt;/html&gt;
+
+button 按钮1&lt;button class=&quot;button&quot;&gt;Sign Up&lt;/button&gt;
+
+p 段落1&lt;p&gt;paragraph of text  &lt;/p&gt;
+
+a 链接1&lt;a href=&quot;https://www.baidu.com/&quot; target=&quot;_blank&quot;&gt;Link to baidu &lt;/a&gt;
+
+input1&lt;input class=&quot;email&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;
+
+
+
+div 容器im ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/29/Git/" title="Git">Git</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-29T02:01:04.383Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></span></div><div class="content">Git1、初始化配置查看版本：git–version 
+省略（local）：本地配置，只对本地仓库有效
+–global：全局配置，所有仓库生效
+–system：系统配置，对所有用户生效
+12345678#配置用户名git config --global user.name &quot;Mochi Xu&quot;#配置邮箱git config --global user.email xvmochi1011@gmail.com#保存git config --global credential.helper store#查看配置git config --global --list
+
+
+
+2、新建仓库
+本地：git init
+
+
+.git是隐藏目录所以要用 ls -a
+
+
+ls -altr
+
+-a: 显示所有文件，包括以.开头的隐藏文件。
+-l: 长格式输出，显示文件的详细信息，包括权限、所有者、大小等
+-t: 按照修改时间排序，最新修改的文件排在前面。
+-r: 倒序排序，与 -t 一起使用时，最新修改的文件排在最后面
+
+指定目录：git init  xxx 当前目录下会创建个xxx子目录
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/29/docker/" title="Docker">Docker</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-08-29T02:01:04.375Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></span></div><div class="content">Docker1、安装镜像是一个只读模板，容器是一个运行实例
+docker仓库存储docker镜像
+123sudo apt-get install docker.iodocker versionsudo systemctl status docker.service
+
+
+1234sudo groupadd docker               #添加用户组sudo gpasswd -a username docker    #将当前用户添加至用户组newgrp docker                      #更新用户组reboot
+
+2、容器化和Dockerfile
+创建一个Dockerfile
+使用Dockerfile构建镜像
+使用镜像创建和运行容器
+
+如果没有docker在浏览器外运行一个js文件需要：
+
+安装操作系统
+安装NodeJS
+复制应用程序、依赖包、配置文件
+执行启动命令运行程序
+
+Dockerfile
+1234567FROM node:14-alpineCOPY index.js /CMD [&quot;node&quot;,&quot;/index.js& ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://w.wallhaven.cc/full/l8/wallhaven-l8yl7p.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Pao Pao</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/29/%E6%8C%87%E9%92%88/" title="指针">指针</a><time datetime="2023-08-29T02:01:04.467Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/29/%E5%BA%93+Makefile/" title="Makefile+动静态库">Makefile+动静态库</a><time datetime="2023-08-29T02:01:04.455Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/29/VSCode%20C++/" title="VSCode">VSCode</a><time datetime="2023-08-29T02:01:04.451Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/29/Redis/" title="Redis">Redis</a><time datetime="2023-08-29T02:01:04.443Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/29/Nginx/" title="Nginx">Nginx</a><time datetime="2023-08-29T02:01:04.431Z" title="Created 2023-08-29 10:01:04">2023-08-29</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">12</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-08-29T02:17:23.783Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Pao Pao</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
